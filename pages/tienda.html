@@ -3,9 +3,388 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Barro & Fuego | Tienda</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png.png">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
-    
+<header class="site-header">
+
+    <!-- Barra superior: logo y acciones de usuario -->
+    <div class="header-top">
+      <div class="container header-top__inner">
+
+        <div class="header-top__logo">
+          <img src="../assets/logopng.png" alt="Logo Barro & Fuego" class="logo">
+        </div>
+
+        <div class="header-top__actions">
+          <button class="btn-icon" aria-label="Mi cuenta">
+            <i class="bi bi-person-circle"></i>
+          </button>
+          <button class="btn-icon btn-cart" aria-label="Ver carrito">
+            <i class="bi bi-cart"></i>
+            <span class="cart-label">Carrito</span>
+            <span class="cart-count">(0)</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Barra de navegación principal -->
+    <nav class="navbar" aria-label="Navegación principal">
+      <div class="container navbar__inner">
+
+        <button class="navbar__toggle" aria-label="Abrir menú">
+          <i class="bi bi-list"></i>
+        </button>
+
+        <ul class="navbar__menu">
+          <li><a href="../index.html" >Inicio</a></li>
+          <li><a href="./tienda.html" class="active">Tienda</a></li>
+          <li><a href="./proceso.html">Proceso</a></li>
+          <li><a href="./cuidados.html">Cuidados</a></li>
+          <li><a href="./contacto.html">Contactanos</a></li>
+        </ul>
+
+        <div class="navbar__search">
+          <input type="search" placeholder="Buscar..." aria-label="Buscar productos">
+          <button class="btn-search" aria-label="Ejecutar búsqueda">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+    <section class="page-hero">
+    <div class="container">
+      <p class="page-hero__breadcrumb">
+        <a href="./index.html">Inicio</a>
+        <i class="bi bi-chevron-right"></i>
+        <span>Tienda</span>
+      </p>
+      <h1 class="page-hero__title">Tienda</h1>
+      <p class="page-hero__subtitle">Cada pieza nace del encuentro entre la tierra, el fuego y el tiempo. Descubrí objetos pensados 
+        para habitar tus espacios con calidez y autenticidad.</p>
+    </div>
+  </section>
+    <!-- =============================================
+       TIENDA
+  ============================================= -->
+  <div class="shop-wrapper">
+
+    <!-- Radios ocultos — uno por categoría -->
+    <input type="radio" name="filtro" id="f-todos"      class="filter-radio" checked>
+    <input type="radio" name="filtro" id="f-vajilla"    class="filter-radio">
+    <input type="radio" name="filtro" id="f-decoracion" class="filter-radio">
+    <input type="radio" name="filtro" id="f-tazas"      class="filter-radio">
+    <input type="radio" name="filtro" id="f-sets"       class="filter-radio">
+
+    <main class="shop-layout">
+      <div class="container shop-layout__inner">
+
+        <!-- SIDEBAR -->
+        <aside class="shop-sidebar" aria-label="Filtros de categoría">
+
+          <div class="sidebar-block">
+            <h2 class="sidebar-block__title">Categorías</h2>
+            <ul class="filter-list" role="list">
+              <li>
+                <label for="f-todos" class="filter-btn">
+                  Ver todos los productos
+                  <span class="filter-count">12</span>
+                </label>
+              </li>
+              <li>
+                <label for="f-vajilla" class="filter-btn">
+                  Vajilla
+                  <span class="filter-count">3</span>
+                </label>
+              </li>
+              <li>
+                <label for="f-decoracion" class="filter-btn">
+                  Decoración
+                  <span class="filter-count">3</span>
+                </label>
+              </li>
+              <li>
+                <label for="f-tazas" class="filter-btn">
+                  Tazas & Mugs
+                  <span class="filter-count">3</span>
+                </label>
+              </li>
+              <li>
+                <label for="f-sets" class="filter-btn">
+                  Sets
+                  <span class="filter-count">3</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar-block sidebar-block--promo">
+            <i class="bi bi-box2-heart"></i>
+            <p>¿Buscás algo especial? Hacemos <strong>pedidos personalizados</strong>.</p>
+            <a href="./contacto.html" class="btn btn--outline">Consultar</a>
+          </div>
+
+        </aside>
+
+        <!-- GRILLA -->
+        <section class="shop-main" aria-label="Productos">
+
+          <div class="products" id="products-grid" role="list">
+
+            <!-- ── VAJILLA ── -->
+            <article class="product-card pc-vajilla" role="listitem">
+              <div class="product-card__image">
+                <img src="../assets/img/platosMarea.jpg" alt="Set de Platos Azul Premium">
+                <span class="product-card__tag">Disponible</span>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Marea</h3>
+                <p class="product-card__material"> Gres cerámico premium de alta temperatura</p>
+                <p class="product-card__desc">Inspirado en las corrientes del océano y el movimiento constante del agua.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">set x6 $170.000</span>
+                  <button class="btn btn--add">+ Agregar</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card pc-vajilla" role="listitem">
+              <div class="product-card__image">
+                <img src="../assets/img/platosBicolor.jpg" alt="Set Platos Dos Colores">
+                <span class="product-card__tag product-card__tag--sold">Vendido</span>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Tierra Serena</h3>
+                <p class="product-card__material"> Gres Artesanal · esmalte reactivo</p>
+                <p class="product-card__desc">Piezas de acabado orgánico y textura acanalada, inspiradas en los tonos
+                de la tierra y el agua. Diseñadas para vestir la mesa con elegancia natural.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">$54.400</span>
+                  <button class="btn btn--add" disabled aria-disabled="true">Agotada</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card pc-vajilla" role="listitem">
+              <div class="product-card__image">
+                <img src="../assets/img/setOceanoTierra.jpg" alt="Set Platos Playos Oceano de Tierra">
+                <span class="product-card__tag">Disponible</span>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Oceano de Tierra</h3>
+                <p class="product-card__material">Gres cerámico de alta temperatura</p>
+                <p class="product-card__desc">Pieza realizada a mano que combina la fuerza de la tierra con la profundidad del océano.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">set x6 $139.900</span>
+                  <button class="btn btn--add">+ Agregar</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- ── DECORACIÓN ── -->
+            <article class="product-card pc-decoracion" role="listitem">
+              <div class="product-card__image">
+                <img src="../assets/img/jarronesatemporales.jpg" alt="Colección Raíz — jarrones de arcilla natural">
+                <span class="product-card__tag product-card__tag--sold">Vendido</span>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Colección Raíz</h3>
+                <p class="product-card__material">Arcilla natural · esmaltes minerales</p>
+                <p class="product-card__desc">Piezas inspiradas en la belleza imperfecta de la tierra, creadas para aportar calidez y carácter al espacio.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">$140.700</span>
+                  <button class="btn btn--add" disabled aria-disabled="true">Agotada</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card pc-decoracion" role="listitem">
+              <div class="product-card__image">
+                <img src="../assets/img/setAurora.jpg" alt="escultura arqueada texturizada, jarrón cilíndrico ondulado, figura decorativa de ave">
+                <span class="product-card__tag">Disponible</span>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Set Decorativo Aurora</h3>
+                <p class="product-card__material">Cerámica Artesanal Esmaltada</p>
+                <p class="product-card__desc">Una composición decorativa de líneas orgánicas y texturas contemporáneas que aporta equilibrio
+                   y sofisticación a cualquier ambiente.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">$87.300</span>
+                  <button class="btn btn--add">+ Agregar</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card pc-decoracion" role="listitem">
+              <div class="product-card__image">
+                <img src="../assets/img/setDunas.jpg" alt="jarrón alto negro mate, jarrón azul profundo, jarrón terracota
+                cuenco decorativo">
+                <span class="product-card__tag">Disponible</span>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Set Dunas</h3>
+                <p class="product-card__material">Cerámica artesanal pintada y sellada con acabado mate.</p>
+                <p class="product-card__desc">Conjunto decorativo inspirado en la armonía de las formas puras y los colores de la naturaleza.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">$135.400</span>
+                  <button class="btn btn--add">+ Agregar</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- ── TAZAS & MUGS ── -->
+            <article class="product-card pc-tazas" role="listitem">
+              <div class="product-card__image">
+                <img src="../assets/img/tazaAzulProfundo.jpg" alt="Mug Azul Profundo">
+                <span class="product-card__tag">Disponible</span>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Mugs Azul Profundo</h3>
+                <p class="product-card__material">Gres artesanal esmaltado</p>
+                <p class="product-card__desc">Inspirado en la profundidad del océano, su esmalte degradado combina carácter
+                   y serenidad en una pieza pensada para acompañar pausas conscientes.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">$28.000</span>
+                  <button class="btn btn--add">+ Agregar</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card pc-tazas" role="listitem">
+              <div class="product-card__image">
+                <img src="../assets/img/tazaRio.jpg" alt="Taza Cerámica Pintada">
+                <span class="product-card__tag product-card__tag--sold">Vendido</span>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Taza Río</h3>
+                <p class="product-card__material">Barro gres artesanal con esmalte reactivo turquesa</p>
+                <p class="product-card__desc">Cada trazo de esmalte fluye de manera única, creando una pieza irrepetible donde la materia y el fuego dejan su propia huella.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">$32.000</span>
+                  <button class="btn btn--add" disabled aria-disabled="true">Agotada</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card pc-tazas" role="listitem">
+              <div class="product-card__image">
+                <img src="../assets/img/tazaSilvestre.jpg" alt="Taza Cerámica Verde">
+                <span class="product-card__tag">Disponible</span>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Taza Silvestre</h3>
+                <p class="product-card__material">Gres de alta temperatura · Detalles modelados a mano</p>
+                <p class="product-card__desc">Una pieza de carácter escultórico inspirada en formas orgánicas. Diseñada para quienes encuentran belleza en los objetos extraordinarios.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">$45.000</span>
+                  <button class="btn btn--add">+ Agregar</button>
+                </div>
+              </div>
+            </article>
+
+            <!-- ── SETS ── -->
+            <article class="product-card pc-sets" role="listitem">
+              <div class="product-card__image">
+                <img src="../assets/img/setHorizonteBicolor.jpg" alt="Set Bicolor — dos tazas, dos cuencos y dos platitos">
+                <span class="product-card__tag">Disponible</span>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Set Horizonte Bicolor</h3>
+                <p class="product-card__material">Gres artesanal esmaltado · Turquesa & Arcilla Roja</p>
+                <p class="product-card__desc">Una colección que celebra el encuentro entre los tonos de la tierra y el color. Diseñado para compartir
+                   momentos cotidianos con una estética contemporánea y cálida.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">$95.000</span>
+                  <button class="btn btn--add">+ Agregar</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card pc-sets" role="listitem">
+              <div class="product-card__image">
+                <img src="../assets/img/setAtelier.jpg" alt="Set Atelier - Platos diseño contemporaneo">
+                <span class="product-card__tag">Disponible</span>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Set Atelier</h3>
+                <p class="product-card__material">Gres artesanal esmaltado · Decoración y texturas realizadas a mano</p>
+                <p class="product-card__desc">Una curaduría de piezas únicas que convierten la mesa en un espacio de expresión, belleza y autenticidad.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">$165.000</span>
+                  <button class="btn btn--add">+ Agregar</button>
+                </div>
+              </div>
+            </article>
+
+            <article class="product-card pc-sets" role="listitem">
+              <div class="product-card__image">
+                <img src="../assets/img/setCalma.jpg" alt="Set de platos, tazas y bowl">
+                <span class="product-card__tag product-card__tag--sold">Vendido</span>
+              </div>
+              <div class="product-card__body">
+                <h3 class="product-card__name">Set Calma</h3>
+                <p class="product-card__material">Gres artesanal esmaltado</p>
+                <p class="product-card__desc">Una composición de formas suaves y tonos serenos que invita a disfrutar los pequeños rituales cotidianos.</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">$110.000</span>
+                  <button class="btn btn--add" disabled aria-disabled="true">Agotada</button>
+                </div>
+              </div>
+            </article>
+
+          </div><!-- /products -->
+        </section>
+
+      </div>
+    </main>
+  </div><!-- /shop-wrapper -->
+ <!-- =============================================
+       FOOTER
+  ============================================= -->
+  <footer class="site-footer">
+    <div class="container footer__container">
+
+      <div class="footer__brand">
+        <h3>Barro & Fuego</h3>
+        <p>Piezas de diseño artesanal creadas para quienes encuentran belleza en los detalles esenciales.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Navegación del pie">
+        <h4>Navegación</h4>
+        <a href="./index.html">Inicio</a>
+        <a href="./tienda.html">Tienda</a>
+        <a href="./proceso.html">Proceso</a>
+        <a href="./cuidados.html">Cuidados</a>
+        <a href="./contacto.html">Contacto</a>
+      </nav>
+
+      <address class="footer__contact">
+        <h4>Contacto</h4>
+        <p>Buenos Aires, Argentina</p>
+        <p><a href="mailto:hola@barroyfuego.com">hola@barroyfuego.com</a></p>
+        <p><a href="tel:+541122220000">+54 11 2222-0000</a></p>
+
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </address>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p>© 2026 Barro & Fuego · Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
