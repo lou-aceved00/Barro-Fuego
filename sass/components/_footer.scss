@@ -1,0 +1,105 @@
+@use "../utilities/variables" as *;
+
+.site-footer {
+  background-color: $color-carbon;
+  margin-top: 8rem;
+  padding-top: $espacio-2xl;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer__container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: $espacio-2xl;
+  padding-bottom: $espacio-xl;
+}
+
+.footer__brand h3 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: $color-arena;
+  margin-bottom: 1.5rem;
+}
+
+.footer__brand p {
+  font-size: 1.5rem;
+  color: #b8aaa0;
+  line-height: 1.8;
+  max-width: 38rem;
+}
+
+.footer__nav h4,
+.footer__contact h4 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: $color-arena;
+  margin-bottom: 2rem;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.footer__nav a {
+  font-size: 1.4rem;
+  color: #b8aaa0;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.footer__nav a:hover {
+  color: $color-arena;
+  transform: translateX(4px);
+}
+
+.footer__contact p {
+  font-size: 1.4rem;
+  color: $color-foot-cont;
+  margin-bottom: 1rem;
+}
+
+.footer__contact a {
+  color: $color-foot-cont;
+  transition: color 0.2s;
+}
+
+.footer__contact a:hover { color: $color-arena; }
+
+.footer__social {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.footer__social a {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-arena;
+  font-size: 1.8rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.footer__social a:hover {
+  background-color: $color-tierra;
+  border-color: $color-tierra;
+  transform: translateY(-3px);
+}
+
+.footer__bottom {
+  padding-block: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: center;
+}
+
+.footer__bottom p {
+  font-size: 1.3rem;
+  color: $color-foot-cont;
+  letter-spacing: 0.05em;
+}

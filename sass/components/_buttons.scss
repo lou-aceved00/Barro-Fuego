@@ -1,0 +1,97 @@
+@use "../utilities/variables" as *;
+
+.btn {
+  display: inline-block;
+  font-family: $font-body;
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  padding: 0.7rem 1.5rem;
+  border-radius: $radio-sm;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+.btn:hover { transform: scale(1.03); }
+
+/* Botón sólido (CTA principal) */
+.btn--primary {
+  background-color: $color-tierra;
+  color: $color-crema;
+  border-color: $color-tierra;
+}
+.btn--primary:hover {
+  background-color: $color-carbon;
+  border-color: $color-carbon;
+}
+
+/* Botón con borde */
+.btn--outline {
+  background-color: transparent;
+  color: $color-principal;
+  border-color: $color-principal;
+}
+.btn--outline:hover {
+  background-color: $color-principal;
+  color: $color-crema;
+}
+
+/* Botón fantasma sobre fondos oscuros (banner) */
+.btn--ghost-light {
+  display: inline-block;
+  margin-top: $espacio-lg;
+  padding: 1.3rem 3.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  color: $color-blanco;
+  border-radius: 999px;
+  font-family: $font-body;
+  font-size: 1.2rem;
+  letter-spacing: 0.18rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.btn--ghost-light:hover {
+  background-color: $color-blanco;
+  color: $color-carbon;
+}
+
+/* Botón de agregar producto */
+.btn--add {
+  font-size: 1.3rem;
+  padding: 0.45rem 1rem;
+  background: transparent;
+  border: 1px solid $color-borde;
+  color: $color-texto-suave;
+  border-radius: $radio-sm;
+  transition: all 0.2s;
+}
+.btn--add:hover:not(:disabled) {
+  border-color: $color-tierra;
+  color: $color-tierra;
+}
+.btn--add:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Botones de ícono (header) */
+.btn-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: transparent;
+  border: none;
+  color: $color-marron;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.btn-icon .bi-person-circle {
+  font-size: 3rem;
+  padding-right: 2.5rem;
+  border-right: 1px solid $color-marron;
+}
+.btn-cart .bi-cart { font-size: 3rem; }
+
+.btn-search:hover { background-color: rgba(61, 5, 5, 0.79); }

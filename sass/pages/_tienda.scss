@@ -1,0 +1,178 @@
+@use "../utilities/variables" as *;
+
+.page-hero {
+  background-color: $color-crema;
+  border-bottom: 1px solid $color-borde;
+  padding-block: 4rem 3.5rem;
+}
+
+.page-hero__breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: $font-body;
+  font-size: 1.2rem;
+  color: $color-texto-suave;
+  margin-bottom: 1.2rem;
+}
+
+.page-hero__breadcrumb a {
+  color: $color-texto-suave;
+  transition: color 0.2s;
+}
+.page-hero__breadcrumb a:hover { color: $color-tierra; }
+.page-hero__breadcrumb .bi    { font-size: 1rem; }
+
+.page-hero__title {
+  font-size: 4.8rem;
+  font-weight: 500;
+  color: $color-carbon;
+  line-height: 1.1;
+  margin-bottom: 0.8rem;
+}
+
+.page-hero__subtitle {
+  font-size: 1.6rem;
+  color: $color-carbon;
+}
+
+.shop-wrapper {
+  padding-block:$espacio-xl;
+}
+
+.shop-layout__inner {
+  display: grid;
+  grid-template-columns: 26rem 1fr;
+  gap: $espacio-lg;
+  align-items: start;
+}
+
+.shop-sidebar {
+  position: sticky;
+  top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: $espacio-md;
+}
+
+.sidebar-block {
+  background-color: $color-blanco;
+  border: 1px solid $color-borde;
+  border-radius: $radio-lg;
+  padding: $espacio-md;
+}
+
+.sidebar-block__title {
+  font-size: 1.3rem;
+  font-family: $font-body;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $color-carbon-soft;
+  margin-bottom: $espacio-sm;
+}
+
+.filter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+/* Los labels que actúan como botones de filtro */
+.filter-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1.2rem;
+  border: 1px solid transparent;
+  border-radius: $radio-md;
+  background: transparent;
+  font-family: $font-display;
+  font-size: 1.5rem;
+  color: $color-texto;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter-btn:hover {
+  background-color: $color-arena;
+  color: $color-carbon;
+}
+
+.filter-count {
+  font-family: $font-body;
+  font-size: 1.1rem;
+  background-color: rgba(0, 0, 0, 0.07);
+  border-radius: 100px;
+  padding: 0.1rem 0.6rem;
+  min-width: 2.4rem;
+  text-align: center;
+}
+
+/* Bloque promo */
+.sidebar-block--promo {
+  text-align: center;
+  background-color: $color-crema;
+  border-color: $color-arena-dark;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sidebar-block--promo .bi {
+  font-size: 2.8rem;
+  color: $color-carbon;
+}
+
+.sidebar-block--promo p {
+  font-size: 1.4rem;
+  color: $color-carbon;
+  line-height: 1.6;
+}
+
+
+/* Ocultar los radio inputs del flujo visual */
+.filter-radio {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ── Estado activo del label correspondiente al radio checked ── */
+#f-todos:checked      ~ .shop-layout label[for="f-todos"],
+#f-vajilla:checked    ~ .shop-layout label[for="f-vajilla"],
+#f-decoracion:checked ~ .shop-layout label[for="f-decoracion"],
+#f-tazas:checked      ~ .shop-layout label[for="f-tazas"],
+#f-sets:checked       ~ .shop-layout label[for="f-sets"] {
+  background-color: $color-principal;
+  color: $color-blanco;
+  border-color: $color-principal;
+}
+
+#f-todos:checked      ~ .shop-layout label[for="f-todos"] .filter-count,
+#f-vajilla:checked    ~ .shop-layout label[for="f-vajilla"] .filter-count,
+#f-decoracion:checked ~ .shop-layout label[for="f-decoracion"] .filter-count,
+#f-tazas:checked      ~ .shop-layout label[for="f-tazas"] .filter-count,
+#f-sets:checked       ~ .shop-layout label[for="f-sets"] .filter-count {
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+/* ── Ocultar todas las tarjetas cuando hay un filtro activo ── */
+#f-vajilla:checked    ~ .shop-layout .product-card,
+#f-decoracion:checked ~ .shop-layout .product-card,
+#f-tazas:checked      ~ .shop-layout .product-card,
+#f-sets:checked       ~ .shop-layout .product-card {
+  display: none;
+}
+
+/* ── Mostrar solo las de la categoría seleccionada ── */
+#f-vajilla:checked    ~ .shop-layout .pc-vajilla,
+#f-decoracion:checked ~ .shop-layout .pc-decoracion,
+#f-tazas:checked      ~ .shop-layout .pc-tazas,
+#f-sets:checked       ~ .shop-layout .pc-sets {
+  display: block;
+}
+
+

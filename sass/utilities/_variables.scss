@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Basic&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+$font-display:'Gelasio', Georgia, serif;
+$font-body:'Basic', sans-serif;
+
+/*Paleta */
+$color-blanco:       #ffffff;
+$color-crema:        #faf7f2;
+$color-arena:        #f5f0e8;
+$color-arena-dark:   #ede5d8;
+$color-tierra:       #7a5c44;
+$color-tierra-light: #c4a882;
+$color-marron:       #472b19;
+$color-principal:    #3F0D12;
+$color-carbon:       #2c2420;
+$color-carbon-soft:  #5a4a42;
+$color-texto:        #3a2e28;
+$color-texto-suave:  #7a6860;
+$color-borde:        #ddd3c4;
+$color-verde:        #4a6741;
+$color-rojo:         #8b3a2e;
+$color-foot-cont:    #b8aaa0;
+
+/* Espaciado */
+$espacio-xs:  0.5rem;
+$espacio-sm:  1rem;
+$espacio-md:  1.5rem;
+$espacio-lg:  2.5rem;
+$espacio-xl:  4rem;
+$espacio-2xl: 6rem;
+
+  /* Bordes */
+$radio-sm: 4px;
+$radio-md: 8px;
+$radio-lg: 16px;
+

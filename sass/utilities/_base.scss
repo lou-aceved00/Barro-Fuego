@@ -1,0 +1,37 @@
+@use "variables" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Basic&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol { list-style: none; }
+a { text-decoration: none; }
+img { display: block; max-width: 100%; }
+button { font-family: inherit; cursor: pointer; }
+address { font-style: normal; }
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-display;
+  font-size: 1.6rem;
+  background-color: $color-crema;
+  color: $color-texto;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 120rem;
+  margin-inline: auto;
+  padding-inline: 3rem;
+}
