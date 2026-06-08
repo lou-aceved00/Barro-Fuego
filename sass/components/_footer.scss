@@ -2,7 +2,6 @@
 
 .site-footer {
   background-color: $color-carbon;
-  margin-top: 8rem;
   padding-top: $espacio-2xl;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
@@ -102,4 +101,41 @@
   font-size: 1.3rem;
   color: $color-foot-cont;
   letter-spacing: 0.05em;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+
+  .footer__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .footer__container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+    .footer__brand p {
+    max-width: 100%;
+    margin-inline: auto;
+  }
+    .footer__nav {
+    align-items: center;
+  }
+  .footer__social {
+    justify-content: center;
+  }
+  .footer__brand h3 {
+    font-size: 2.4rem;
+  }
+  
 }

@@ -1,11 +1,207 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <title>Barro & Fuego | Cuidados</title>
+  <link rel="icon" type="image/png" href="../assets/favicon.png.png">
+  <link rel="stylesheet" href="../styles/styles.css">
 </head>
-<body>
-    
+<body>    
+<!-- =============================================
+     HEADER: Logo + Carrito + Navbar
+============================================= -->
+<header class="site-header">
+
+  <!-- Barra superior: logo y acciones de usuario -->
+  <div class="header-top">
+    <div class="container header-top__inner">
+
+      <div class="header-top__logo">
+        <img src="../assets/logopng.png" alt="Logo Barro & Fuego" class="logo">
+      </div>
+
+      <div class="header-top__actions">
+        <button class="btn-icon" aria-label="Mi cuenta">
+          <i class="bi bi-person-circle"></i>
+        </button>
+        <button class="btn-icon btn-cart" aria-label="Ver carrito">
+          <i class="bi bi-cart"></i>
+          <span class="cart-label">Carrito</span>
+          <span class="cart-count">(0)</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Barra de navegación principal -->
+  <nav class="navbar" aria-label="Navegación principal">
+
+    <!-- Checkbox oculto — motor del toggle CSS-only -->
+    <input type="checkbox" id="nav-toggle" class="navbar__toggle-input">
+
+    <div class="container navbar__inner">
+
+      <!-- Label que hace de hamburger -->
+      <label for="nav-toggle" class="navbar__toggle" aria-label="Abrir menú">
+        <i class="bi bi-list"></i>
+      </label>
+
+      <ul class="navbar__menu">
+        <li><a href="../index.html" >Inicio</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="proceso.html">Proceso</a></li>
+        <li><a href="cuidados.html"class="active">Cuidados</a></li>
+        <li><a href="contacto.html">Contactanos</a></li>
+      </ul>
+
+      <div class="navbar__search">
+        <input type="search" placeholder="Buscar..." aria-label="Buscar productos">
+        <button class="btn-search" aria-label="Ejecutar búsqueda">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+</header>
+
+
+  <main>
+
+    <!-- ENCABEZADO: título izquierda, bajada derecha -->
+    <section class="cuidados-intro">
+      <div class="container">
+        <span class="cuidados-eyebrow">Guía de cuidados</span>
+        <div class="cuidados-intro__inner">
+          <h1 class="cuidados-intro__title">Cómo cuidar<br>tu pieza</h1>
+          <p class="cuidados-intro__lead">
+            La cerámica artesanal es resistente si se trata bien.
+            Estas indicaciones son todo lo que necesitás saber
+            para que cada pieza te dure toda la vida.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOQUES -->
+    <section class="cuidados-contenido section">
+      <div class="container">
+        <div class="cuidados-bloques">
+
+          <!-- Limpieza -->
+          <article class="cuidados-bloque cuidados-bloque--limpieza">
+            <div class="cuidados-bloque__header">
+              <div class="cuidados-bloque__icono">
+                <i class="bi bi-droplet" aria-hidden="true"></i>
+              </div>
+              <h2 class="cuidados-bloque__titulo">Limpieza</h2>
+            </div>
+            <ul class="cuidados-lista">
+              <li>Lavá a mano con agua tibia y detergente suave.</li>
+              <li>Usá una esponja suave, nunca abrasivos ni estropajos metálicos.</li>
+              <li>No dejes las piezas en remojo prolongado.</li>
+              <li><strong>No aptas para lavavajillas.</strong> El calor y los detergentes industriales deterioran el esmalte con el tiempo.</li>
+            </ul>
+          </article>
+
+          <!-- Uso diario -->
+          <article class="cuidados-bloque cuidados-bloque--uso">
+            <div class="cuidados-bloque__header">
+              <div class="cuidados-bloque__icono">
+                <i class="bi bi-cup-hot" aria-hidden="true"></i>
+              </div>
+              <h2 class="cuidados-bloque__titulo">Uso diario</h2>
+            </div>
+            <ul class="cuidados-lista">
+              <li><strong>Microondas:</strong> aptas, siempre que no tengan decoraciones metálicas.</li>
+              <li><strong>Horno convencional:</strong> no recomendado. Los cambios térmicos bruscos pueden fisurrar la pieza.</li>
+              <li><strong>Freezer:</strong> sí, sin pasar del frío directo a calor alto.</li>
+              <li><strong>Alimentos:</strong> todos nuestros esmaltes son libres de plomo y seguros para uso en mesa.</li>
+            </ul>
+          </article>
+
+          <!-- Almacenamiento -->
+          <article class="cuidados-bloque cuidados-bloque--almacenamiento">
+            <div class="cuidados-bloque__header">
+              <div class="cuidados-bloque__icono">
+                <i class="bi bi-shield-check" aria-hidden="true"></i>
+              </div>
+              <h2 class="cuidados-bloque__titulo">Almacenamiento</h2>
+            </div>
+            <ul class="cuidados-lista">
+              <li>Si apilás piezas, colocá un paño suave entre ellas para proteger el esmalte.</li>
+              <li>Los bordes son la zona más vulnerable: manipulá con cuidado.</li>
+              <li>Guardá en un lugar seco para evitar humedad en microfisuras.</li>
+            </ul>
+          </article>
+
+          <!-- Durabilidad -->
+          <article class="cuidados-bloque cuidados-bloque--unicas">
+            <div class="cuidados-bloque__header">
+              <div class="cuidados-bloque__icono">
+                <i class="bi bi-stars" aria-hidden="true"></i>
+              </div>
+              <h2 class="cuidados-bloque__titulo">Lo que las hace únicas</h2>
+            </div>
+            <ul class="cuidados-lista">
+              <li>Las variaciones de tono y textura son parte de la naturaleza artesanal de cada pieza, no imperfecciones.</li>
+              <li>El color puede variar levemente entre piezas del mismo lote por las condiciones del horno.</li>
+              <li>Con el tiempo, el uso diario puede dar a las piezas una pátina que las hace más propias.</li>
+            </ul>
+          </article>
+
+          <!-- Nota -->
+          <div class="cuidados-nota">
+            <p>¿Tenés dudas sobre una pieza específica? <a href="./contacto.html">Escribinos</a> y te orientamos.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+ <!-- =============================================
+       FOOTER
+  ============================================= -->
+  <footer class="site-footer">
+    <div class="container footer__container">
+
+      <div class="footer__brand">
+        <h3>Barro & Fuego</h3>
+        <p>Piezas de diseño artesanal creadas para quienes encuentran belleza en los detalles esenciales.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Navegación del pie">
+        <h4>Navegación</h4>
+        <a href="../index.html">Inicio</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="proceso.html">Proceso</a>
+        <a href="cuidados.html">Cuidados</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+      <address class="footer__contact">
+        <h4>Contacto</h4>
+        <p>Buenos Aires, Argentina</p>
+        <p><a href="mailto:hola@barroyfuego.com">hola@barroyfuego.com</a></p>
+        <p><a href="tel:+541122220000">+54 11 2222-0000</a></p>
+
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </address>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p>© 2026 Barro & Fuego · Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
 </body>
 </html>

@@ -1,0 +1,191 @@
+@use "../utilities/variables" as *;
+
+/* ================================================
+   CUIDADOS
+================================================ */
+
+.cuidados-eyebrow {
+  display: block;
+  font-family: $font-body;
+  font-size: 1.1rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: $color-tierra-light;
+  margin-bottom: 1.2rem;
+}
+
+/* ── Encabezado ── */
+.cuidados-intro {
+  padding-block: $espacio-xl $espacio-lg;
+  border-bottom: 1px solid $color-borde;
+  background-color: $color-blanco;
+}
+
+.cuidados-intro__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $espacio-2xl;
+  align-items: end;
+}
+
+.cuidados-intro__title {
+  font-size: clamp(3.2rem, 4.5vw, 5rem);
+  font-weight: 400;
+  color: $color-carbon;
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+
+.cuidados-intro__lead {
+  font-size: 1.6rem;
+  color: $color-carbon-soft;
+  line-height: 1.8;
+  max-width: 48ch;
+  align-self: end;
+  padding-bottom: 0.4rem;
+}
+
+/* ── Contenido ── */
+.cuidados-contenido {
+  background-color: $color-blanco;
+   padding-block: $espacio-2xl;
+}
+
+/* ── Grilla de bloques ── */
+.cuidados-bloques {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.cuidados-bloque {
+  padding: $espacio-xl;
+  border: 1px solid $color-principal;
+  margin: -1px 0 0 -1px;
+  background-color: $color-blanco;
+  transition: background-color 0.2s ease;
+}
+
+.cuidados-bloque__header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid $color-tierra-light;
+}
+
+/* Ícono base */
+.cuidados-bloque__icono {
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  i { font-size: 1.8rem; }
+}
+
+/* Color por bloque */
+.cuidados-bloque--limpieza .cuidados-bloque__icono {
+  background-color: #ddeaf7;
+  i { color: $color-azul; }
+}
+
+.cuidados-bloque--uso .cuidados-bloque__icono {
+  background-color: $color-tierra-light;
+  i { color: $color-marron; }
+}
+
+.cuidados-bloque--almacenamiento .cuidados-bloque__icono {
+  background-color: #dbf8e7;
+  i { color: #1a5231; }
+}
+
+.cuidados-bloque--unicas .cuidados-bloque__icono {
+  background-color: #ecd1ff;
+  i { color: #562182; }
+}
+
+.cuidados-bloque__titulo {
+  font-size: 1.9rem;
+  font-weight: 400;
+  color: $color-carbon;
+  line-height: 1.2;
+}
+
+.cuidados-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+
+  li {
+    font-size: 1.5rem;
+    color: $color-texto-suave;
+    line-height: 1.65;
+    padding-left: 1.6rem;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.75rem;
+      width: 5px;
+      height: 1px;
+      background-color: $color-tierra-light;
+    }
+  }
+
+  strong {
+    color: $color-carbon;
+    font-weight: 500;
+  }
+}
+
+/* Nota final */
+.cuidados-nota {
+  grid-column: 1 / -1;
+  margin-top: $espacio-xl;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+
+  &::before {
+    content: '*';
+    font-family: $font-display;
+    font-size: 2rem;
+    color: $color-tierra-light;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  p {
+    font-size: 1.4rem;
+    color: $color-texto-suave;
+    line-height: 1.7;
+  }
+
+  a {
+    color: $color-tierra;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    &:hover { color: $color-carbon; }
+  }
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .cuidados-intro__inner {
+    grid-template-columns: 1fr;
+    gap: $espacio-md;
+  }
+}
+
+@media (max-width: 768px) {
+  .cuidados-bloques { grid-template-columns: 1fr; }
+  .cuidados-bloque { margin: -1px 0 0 0; }
+}

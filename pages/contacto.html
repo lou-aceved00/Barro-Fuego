@@ -1,11 +1,296 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <title>Barro & Fuego | Contacto</title>
+  <link rel="icon" type="image/png" href="../assets/favicon.png.png">
+  <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
-    
+<!-- =============================================
+     HEADER: Logo + Carrito + Navbar
+============================================= -->
+<header class="site-header">
+
+  <!-- Barra superior: logo y acciones de usuario -->
+  <div class="header-top">
+    <div class="container header-top__inner">
+
+      <div class="header-top__logo">
+        <img src="../assets/logopng.png" alt="Logo Barro & Fuego" class="logo">
+      </div>
+
+      <div class="header-top__actions">
+        <button class="btn-icon" aria-label="Mi cuenta">
+          <i class="bi bi-person-circle"></i>
+        </button>
+        <button class="btn-icon btn-cart" aria-label="Ver carrito">
+          <i class="bi bi-cart"></i>
+          <span class="cart-label">Carrito</span>
+          <span class="cart-count">(0)</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Barra de navegación principal -->
+  <nav class="navbar" aria-label="Navegación principal">
+
+    <!-- Checkbox oculto — motor del toggle CSS-only -->
+    <input type="checkbox" id="nav-toggle" class="navbar__toggle-input">
+
+    <div class="container navbar__inner">
+
+      <!-- Label que hace de hamburger -->
+      <label for="nav-toggle" class="navbar__toggle" aria-label="Abrir menú">
+        <i class="bi bi-list"></i>
+      </label>
+
+      <ul class="navbar__menu">
+        <li><a href="../index.html" >Inicio</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="proceso.html">Proceso</a></li>
+        <li><a href="cuidados.html">Cuidados</a></li>
+        <li><a href="contacto.html"class="active">Contactanos</a></li>
+      </ul>
+
+      <div class="navbar__search">
+        <input type="search" placeholder="Buscar..." aria-label="Buscar productos">
+        <button class="btn-search" aria-label="Ejecutar búsqueda">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+</header>
+
+
+  <main>
+
+    <section class="contacto-main section" aria-label="Sección principal de contacto">
+      <div class="container">
+        <div class="contacto-grid">
+
+          <!-- COLUMNA IZQUIERDA: info + whatsapp + redes -->
+          <aside class="contacto-info">
+
+            <div class="contacto-info__bloque">
+              <h2 class="contacto-info__titulo">El taller</h2>
+              <address class="contacto-info__address">
+                <div class="contacto-info__fila">
+                  <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                  <div>
+                    <strong>Ubicación</strong>
+                    <span>Av. Libertador 1240, San Miguel<br>Buenos Aires, Argentina</span>
+                  </div>
+                </div>
+                <div class="contacto-info__fila">
+                  <i class="bi bi-envelope" aria-hidden="true"></i>
+                  <div>
+                    <strong>Email</strong>
+                    <a href="mailto:hola@barroyfuego.com">hola@barroyfuego.com</a>
+                  </div>
+                </div>
+                <div class="contacto-info__fila">
+                  <i class="bi bi-clock" aria-hidden="true"></i>
+                  <div>
+                    <strong>Horarios de atención</strong>
+                    <span>Lunes a viernes · 10 a 18 hs</span>
+                  </div>
+                </div>
+              </address>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="contacto-info__bloque">
+              <h2 class="contacto-info__titulo">WhatsApp</h2>
+              <p class="contacto-info__texto">
+                Para consultas rápidas o pedidos personalizados,
+                escribinos directamente por WhatsApp.
+              </p>
+              <a
+                href="https://wa.me/5491122220000?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20sobre%20una%20pieza."
+                class="contacto-whatsapp"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Contactar por WhatsApp"
+              >
+                <i class="bi bi-whatsapp" aria-hidden="true"></i>
+                <span>Escribinos por WhatsApp</span>
+              </a>
+            </div>
+
+            <!-- Redes -->
+            <div class="contacto-info__bloque">
+              <h2 class="contacto-info__titulo">Redes sociales</h2>
+              <p class="contacto-info__texto">Seguinos para ver el trabajo del taller día a día.</p>
+              <div class="contacto-redes">
+                <a href="#" class="contacto-red" aria-label="Instagram de Barro y Fuego" target="_blank" rel="noopener">
+                  <i class="bi bi-instagram" aria-hidden="true"></i>
+                  <span>@barroyfuego</span>
+                </a>
+                <a href="#" class="contacto-red" aria-label="Pinterest de Barro y Fuego" target="_blank" rel="noopener">
+                  <i class="bi bi-pinterest" aria-hidden="true"></i>
+                  <span>Barro & Fuego</span>
+                </a>
+              </div>
+            </div>
+
+          </aside>
+
+          <!-- COLUMNA DERECHA: formulario -->
+          <div class="contacto-form-wrap">
+            <div class="contacto-form__header">
+              <h2 class="contacto-form__titulo">Hablemos.</h2>
+              <p class="contacto-form__subtitulo">Para consultas sobre piezas, pedidos personalizados
+              o simplemente para conocer más sobre el taller.</p>
+            </div>
+
+            <form class="contacto-form" action="#" method="post" novalidate>
+
+              <div class="form-fila form-fila--doble">
+                <div class="form-campo">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    class="form-input"
+                    placeholder="Tu nombre"
+                    required
+                    autocomplete="given-name"
+                  >
+                </div>
+                <div class="form-campo">
+                  <label for="apellido" class="form-label">Apellido</label>
+                  <input
+                    type="text"
+                    id="apellido"
+                    name="apellido"
+                    class="form-input"
+                    placeholder="Tu apellido"
+                    autocomplete="family-name"
+                  >
+                </div>
+              </div>
+
+              <div class="form-campo">
+                <label for="email" class="form-label">Email <span class="form-requerido" aria-hidden="true">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="tu@email.com"
+                  required
+                  autocomplete="email"
+                >
+              </div>
+
+              <div class="form-campo">
+                <label for="motivo" class="form-label">Motivo de contacto</label>
+                <select id="motivo" name="motivo" class="form-select">
+                  <option value="" disabled selected>Seleccioná una opción</option>
+                  <option value="consulta-pieza">Consulta sobre una pieza</option>
+                  <option value="pedido-personalizado">Pedido personalizado</option>
+                  <option value="envios">Consulta sobre envíos</option>
+                  <option value="mayorista">Consulta mayorista</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+
+              <div class="form-campo">
+                <label for="mensaje" class="form-label">Mensaje <span class="form-requerido" aria-hidden="true">*</span></label>
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  class="form-textarea"
+                  rows="5"
+                  placeholder="Contanos en qué podemos ayudarte..."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-pie">
+                <p class="form-aviso">Los campos marcados con <span aria-hidden="true">*</span> son obligatorios.</p>
+                <button type="submit" class="btn btn--primary form-submit">
+                  Enviar mensaje
+                  <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                </button>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MAPA / ZONA -->
+    <section class="contacto-mapa" aria-label="Ubicación del taller">
+      <div class="contacto-mapa__embed">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.2!2d-58.7142!3d-34.5441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDMyJzM4LjgiUyA1OMKwNDInNTEuMSJX!5e0!3m2!1ses!2sar!4v1"
+          width="100%"
+          height="420"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación del taller Barro y Fuego en San Miguel, Buenos Aires"
+        ></iframe>
+      </div>
+      <div class="contacto-mapa__label">
+        <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+        <span>Av. Libertador 1240 · San Miguel, Buenos Aires</span>
+      </div>
+    </section>
+
+  </main>
+ <!-- =============================================
+       FOOTER
+  ============================================= -->
+  <footer class="site-footer">
+    <div class="container footer__container">
+
+      <div class="footer__brand">
+        <h3>Barro & Fuego</h3>
+        <p>Piezas de diseño artesanal creadas para quienes encuentran belleza en los detalles esenciales.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Navegación del pie">
+        <h4>Navegación</h4>
+        <a href="../index.html">Inicio</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="proceso.html">Proceso</a>
+        <a href="cuidados.html">Cuidados</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+      <address class="footer__contact">
+        <h4>Contacto</h4>
+        <p>Buenos Aires, Argentina</p>
+        <p><a href="mailto:hola@barroyfuego.com">hola@barroyfuego.com</a></p>
+        <p><a href="tel:+541122220000">+54 11 2222-0000</a></p>
+
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </address>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p>© 2026 Barro & Fuego · Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
 </body>
 </html>

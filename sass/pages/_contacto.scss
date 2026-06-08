@@ -1,0 +1,306 @@
+@use "../utilities/variables" as *;
+@use "sass:color"; 
+/* ================================================
+   CONTACTO
+================================================ */
+.contacto-hero {
+  background-color: $color-blanco;
+}
+
+.contacto-main {
+  background-color: $color-blanco;
+}
+
+.contacto-eyebrow {
+  display: block;
+  font-family: $font-body;
+  font-size: 1.1rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: $color-tierra;
+  margin-bottom: 1.6rem;
+}
+
+/* ================================================
+   GRID PRINCIPAL: info | formulario
+================================================ */
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 38rem 1fr;
+  gap: $espacio-2xl;
+  align-items: start;
+}
+
+/* ================================================
+   COLUMNA INFO
+================================================ */
+
+.contacto-info {
+  display: flex;
+  flex-direction: column;
+  gap: $espacio-xl;
+  padding-top: $espacio-sm;
+  position: sticky;
+  top: 10rem;
+}
+
+.contacto-info__bloque {
+  padding-bottom: $espacio-lg;
+  border-bottom: 1px solid $color-borde;
+
+  &:last-child { border-bottom: none; padding-bottom: 0; }
+}
+
+.contacto-info__titulo {
+  font-family: $font-display;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $color-principal;
+  margin-bottom: 1.8rem;
+}
+
+.contacto-info__address {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.contacto-info__fila {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.4rem;
+
+  > i {
+    font-size: 1.8rem;
+    color: $color-tierra;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+  }
+
+  strong {
+    display: block;
+    font-size: 1.2rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $color-carbon;
+    margin-bottom: 0.3rem;
+  }
+
+  span, a {
+    font-size: 1.5rem;
+    color: $color-texto-suave;
+    line-height: 1.5;
+    text-decoration: none;
+  }
+
+  a:hover { color: $color-tierra; }
+}
+
+.contacto-info__texto {
+  font-size: 1.5rem;
+  color: $color-carbon;
+  line-height: 1.7;
+  margin-bottom: 1.8rem;
+}
+
+/* Botón WhatsApp */
+.contacto-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.3rem 2.4rem;
+  background-color: #25d366;
+  color: $color-blanco;
+  border-radius: 999px;
+  text-decoration: none;
+  font-family: $font-body;
+  font-size: 1.45rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+
+  i { font-size: 1.8rem; }
+
+  &:hover {
+    background-color: #1ebe59;
+    transform: translateY(-1px);
+  }
+}
+
+/* Redes */
+.contacto-redes {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contacto-red {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  text-decoration: none;
+  color: $color-texto-suave;
+  font-size: 1.5rem;
+  transition: color 0.2s ease;
+
+  i {
+    font-size: 2rem;
+    color: $color-tierra;
+    width: 2rem;
+    text-align: center;
+  }
+
+  &:hover { color: $color-carbon; }
+}
+
+/* ================================================
+   FORMULARIO
+================================================ */
+
+.contacto-form-wrap {
+  background-color: $color-blanco;
+  border: 1.5px solid $color-principal;
+  border-radius: $radio-lg;
+  padding: $espacio-xl;
+}
+
+.contacto-form__titulo {
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: $color-carbon;
+  margin-bottom: 0.6rem;
+}
+
+.contacto-form__subtitulo {
+  font-size: 1.4rem;
+  color: $color-texto-suave;
+  margin-bottom: $espacio-lg;
+}
+
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-fila--doble {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem;
+}
+
+.form-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.form-label {
+  font-family: $font-body;
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $color-carbon;
+  font-weight: 500;
+}
+
+.form-requerido { color: $color-tierra; }
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 1.2rem 1.6rem;
+  background-color: $color-blanco;
+  border: 1px solid $color-borde;
+  border-radius: $radio-sm;
+  font-family: $font-body;
+  font-size: 1.5rem;
+  color: $color-carbon;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  appearance: none;
+
+&::placeholder { color: color.adjust($color-arena, $lightness: -20%); }
+
+  &:focus {
+    outline: none;
+    border-color: $color-tierra-light;
+    box-shadow: 0 0 0 3px rgba($color-tierra-light, 0.15);
+  }
+}
+
+.form-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239a7b5a' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.6rem center;
+  padding-right: 4rem;
+  cursor: pointer;
+}
+.form-select option:checked {
+  background-color: $color-tierra;
+  color: $color-blanco;
+}
+.form-textarea {
+  resize: vertical;
+  min-height: 14rem;
+  line-height: 1.6;
+}
+
+.form-pie {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-top: 0.8rem;
+  border-top: 1px solid $color-borde;
+}
+
+.form-aviso {
+  font-size: 1.25rem;
+  color: $color-texto-suave;
+}
+
+.form-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.3rem 3rem;
+  flex-shrink: 0;
+  font-size: 1.5rem;
+}
+
+/* ================================================
+   MAPA
+================================================ */
+
+.contacto-mapa {
+  border-top: 1px solid $color-borde;
+  margin-bottom: 0;
+}
+
+.contacto-mapa__embed {
+  width: 100%;
+  overflow: hidden;
+
+  iframe { display: block; }
+}
+
+.contacto-mapa__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding-block: 1.6rem;
+  background-color: $color-blanco;
+  border-top: 1px solid $color-borde;
+  font-size: 1.35rem;
+  color: $color-carbon;
+  letter-spacing: 0.06em;
+
+  i { color: $color-tierra; font-size: 1.4rem; }
+}

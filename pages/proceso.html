@@ -3,9 +3,348 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Barro & Fuego | Proceso</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png.png">
+    <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
+   
+<!-- =============================================
+     HEADER: Logo + Carrito + Navbar
+============================================= -->
+<header class="site-header">
+
+  <!-- Barra superior: logo y acciones de usuario -->
+  <div class="header-top">
+    <div class="container header-top__inner">
+
+      <div class="header-top__logo">
+        <img src="../assets/logopng.png" alt="Logo Barro & Fuego" class="logo">
+      </div>
+
+      <div class="header-top__actions">
+        <button class="btn-icon" aria-label="Mi cuenta">
+          <i class="bi bi-person-circle"></i>
+        </button>
+        <button class="btn-icon btn-cart" aria-label="Ver carrito">
+          <i class="bi bi-cart"></i>
+          <span class="cart-label">Carrito</span>
+          <span class="cart-count">(0)</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Barra de navegación principal -->
+  <nav class="navbar" aria-label="Navegación principal">
+
+    <!-- Checkbox oculto — motor del toggle CSS-only -->
+    <input type="checkbox" id="nav-toggle" class="navbar__toggle-input">
+
+    <div class="container navbar__inner">
+
+      <!-- Label que hace de hamburger -->
+      <label for="nav-toggle" class="navbar__toggle" aria-label="Abrir menú">
+        <i class="bi bi-list"></i>
+      </label>
+
+      <ul class="navbar__menu">
+        <li><a href="../index.html" >Inicio</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="proceso.html"class="active">Proceso</a></li>
+        <li><a href="cuidados.html">Cuidados</a></li>
+        <li><a href="contacto.html">Contactanos</a></li>
+      </ul>
+
+      <div class="navbar__search">
+        <input type="search" placeholder="Buscar..." aria-label="Buscar productos">
+        <button class="btn-search" aria-label="Ejecutar búsqueda">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+</header>
+
+
+  <main>
+     <section class="seccion-origen section" aria-labelledby="origen-titulo">
+      <div class="container">
+        <div class="origen__grid">
+ 
+          <!-- Visual -->
+          <div class="origen__visual">
+            <img src="../assets/img/origen.jpg" class="origen__img-principal" alt="Vista del taller de Barro & Fuego">
+          </div>
+ 
+          <!-- Texto -->
+          <div class="origen__content">
+            <p class="origen__eyebrow">Nuestra historia</p>
+            <h2 class="origen__title" id="origen-titulo">
+              Empezamos con<br><em>las manos en la tierra</em>
+            </h2>
+            <div class="origen__body">
+              <p>
+                Barro &amp; Fuego nació de una decisión simple: <strong>volver a lo esencial.</strong>
+                Lo que empezó como una exploración personal en un pequeño taller
+                de Buenos Aires se fue convirtiendo, poco a poco, en un oficio de verdad.
+              </p>
+              <p>
+                Aprendimos a escuchar la arcilla. A entender que cada material
+                tiene su propio tiempo, su propio ritmo. Que el fuego del horno
+                no destruye — transforma. Y que en esa transformación está
+                <strong>la razón por la que seguimos haciendo esto.</strong>
+              </p>
+              <p>
+                Decidimos arrancar porque creemos que los objetos cotidianos merecen
+                ser hermosos. Que una taza con la que empezás el día puede ser,
+                también, una pequeña obra. Que lo artesanal no es un lujo —
+                es una <strong>elección consciente</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- =============================================
+         ETAPAS DEL PROCESO — Timeline
+    ============================================= -->
+    <section class="seccion-etapas" aria-labelledby="etapas-titulo">
+      <div class="container">
+        <div class="etapas__header">
+          <p class="etapas__eyebrow">Paso a paso</p>
+          <h2 class="etapas__title" id="etapas-titulo">Cómo nace una pieza</h2>
+        </div>
+ 
+        <div class="etapas__list" role="list">
+ 
+          <!-- Etapa 1 — texto izquierda, foto derecha -->
+          <div class="etapa__celda--izq" role="listitem">
+            <p class="etapa__num">01</p>
+            <h3 class="etapa__nombre">Selección y amasado</h3>
+            <p class="etapa__desc">
+              Todo empieza eligiendo la arcilla correcta según la pieza
+              que queremos hacer. La amasamos a mano para eliminar
+              burbujas de aire y lograr una masa homogénea.
+            </p>
+          </div>
+          <div class="etapa__dot" aria-hidden="true">
+            <div class="etapa__dot-inner"></div>
+          </div>
+          <div class="etapa__celda--der">
+            <img src="../assets/img/seleccion-amasado.jpg" alt="Amasado del barro en el taller">
+          </div>
+ 
+          <!-- Spacer -->
+          <div class="etapa__espacio--izq"></div>
+          <div class="etapa__espacio--dot"></div>
+          <div class="etapa__espacio--der"></div>
+ 
+          <!-- Etapa 2 — foto izquierda, texto derecha -->
+          <div class="etapa__celda--izq">
+            <img src="../assets/img/torneado.jpg" alt="Torneado del barro en el taller">
+          </div>
+          <div class="etapa__dot" aria-hidden="true">
+            <div class="etapa__dot-inner"></div>
+          </div>
+          <div class="etapa__celda--der" role="listitem">
+            <p class="etapa__num">02</p>
+            <h3 class="etapa__nombre">Torneado o modelado</h3>
+            <p class="etapa__desc">
+              Damos forma en el torno o a mano, según el diseño.
+              Es el momento más concentrado del proceso —
+              donde la pieza empieza a existir.
+            </p>
+          </div>
+ 
+          <!-- Spacer -->
+          <div class="etapa__espacio--izq"></div>
+          <div class="etapa__espacio--dot"></div>
+          <div class="etapa__espacio--der"></div>
+ 
+          <!-- Etapa 3 -->
+          <div class="etapa__celda--izq" role="listitem">
+            <p class="etapa__num">03</p>
+            <h3 class="etapa__nombre">Secado y primera cocción</h3>
+            <p class="etapa__desc">
+              Las piezas secan lentamente durante días antes de
+              entrar al horno por primera vez (bizcocho).
+              Aquí el barro se endurece y está listo para esmaltarse.
+            </p>
+          </div>
+          <div class="etapa__dot" aria-hidden="true">
+            <div class="etapa__dot-inner"></div>
+          </div>
+          <div class="etapa__celda--der">
+           <img src="../assets/img/etapa-secado.jpg" alt="Etapa del secado">
+            </div>
+ 
+          <!-- Spacer -->
+          <div class="etapa__espacio--izq"></div>
+          <div class="etapa__espacio--dot"></div>
+          <div class="etapa__espacio--der"></div>
+ 
+          <!-- Etapa 4 -->
+          <div class="etapa__celda--izq">
+            <img src="../assets/img/vidriado-inmersion.jpg" alt="Baño de inmersión esmaltado ceramica">
+          </div>
+          <div class="etapa__dot" aria-hidden="true">
+            <div class="etapa__dot-inner"></div>
+          </div>
+          <div class="etapa__celda--der" role="listitem">
+            <p class="etapa__num">04</p>
+            <h3 class="etapa__nombre">Vidriado y esmaltes</h3>
+            <p class="etapa__desc">
+              Aplicamos esmaltes minerales a mano con pincel o inmersión.
+              Los colores que ves en las piezas terminadas son el resultado
+              de reacciones químicas dentro del horno — nunca exactamente predecibles.
+            </p>
+          </div>
+ 
+          <!-- Spacer -->
+          <div class="etapa__espacio--izq"></div>
+          <div class="etapa__espacio--dot"></div>
+          <div class="etapa__espacio--der"></div>
+ 
+          <!-- Etapa 5 -->
+          <div class="etapa__celda--izq" role="listitem">
+            <p class="etapa__num">05</p>
+            <h3 class="etapa__nombre">Cocción final</h3>
+            <p class="etapa__desc">
+              El horno llega a más de 1200 °C. Durante horas,
+              los esmaltes se funden, vitrean y fijan el color
+              para siempre. Al abrir la puerta,
+              descubrimos lo que el fuego decidió.
+            </p>
+          </div>
+          <div class="etapa__dot" aria-hidden="true">
+            <div class="etapa__dot-inner"></div>
+          </div>
+          <div class="etapa__celda--der">
+            <img src="../assets/img/piezahorneada.jpg" alt="Piezas ya acabadas">
+            </div>
+        </div><!-- /etapas__list -->
+      </div>
+    </section>
+ 
+    <!-- =============================================
+         GALERÍA DEL TALLER
+    ============================================= -->
+    <section class="seccion-galeria" aria-labelledby="galeria-titulo">
+      <div class="container">
+        <div class="galeria__header">
+          <p class="galeria__eyebrow">El taller</p>
+          <h2 class="galeria__title" id="galeria-titulo">Donde todo sucede</h2>
+          <p class="galeria__subtitle">
+            Un espacio pequeño, lleno de arcilla, herramientas y silencio.
+            El lugar donde cada pieza empieza a ser.
+          </p>
+        </div>
+ 
+        <div class="galeria__mosaic" role="list" aria-label="Galería del taller">
+ 
+          <div class="galeria__item" role="listitem">
+           <img src="../assets/img/procesoamano.jpg" alt="Taller Barro y Fuego">
+            </div>
+ 
+          <div class="galeria__item" role="listitem">
+             <img src="../assets/img/pintura-pieza-taller.jpg" alt="Taller Barro y Fuego">
+            </div>
+ 
+          <div class="galeria__item" role="listitem">
+             <img src="../assets/img/proceso-creativo.jpg" alt="Taller Barro y Fuego">
+            </div>
+ 
+          <div class="galeria__item" role="listitem">
+             <img src="../assets/img/proceso-modelado.jpg" alt="Taller Barro y Fuego">
+            </div>
+ 
+          <div class="galeria__item" role="listitem">
+            <img src="../assets/img/proceso-modelado2.jpg" alt="Taller Barro y Fuego">
+            </div>
+ 
+          <div class="galeria__item" role="listitem">
+             <img src="../assets/img/fototaller.jpg" alt="Taller Barro y Fuego">
+            </div>
+ 
+          <div class="galeria__item" role="listitem">
+            <img src="../assets/img/fotopiezastaller.jpg" alt="Taller Barro y Fuego">
+            </div>
+  
+ 
+          <div class="galeria__item" role="listitem">
+            <img src="../assets/img/fotopiezastallerfinal.jpg" alt="Taller Barro y Fuego">
+            </div>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- =============================================
+         CTA FINAL
+    ============================================= -->
+    <section class="seccion-cta section" aria-labelledby="cta-titulo">
+      <div class="container">
+        <p class="cta__eyebrow">Cada pieza tiene una historia</p>
+        <h2 class="cta__title" id="cta-titulo">
+          Llevate algo<br><em>hecho con intención</em>
+        </h2>
+        <p class="cta__desc">
+          Ahora que conocés el proceso, te invitamos a conocer
+          las piezas. Cada una fue hecha a mano, con los mismos
+          cuidados que acabás de leer.
+        </p>
+        <div class="cta__actions">
+        <a href="./tienda.html" class="btn btn--primary">Ver la tienda</a>
+        </div>
+        </section>
+ 
+    </main>
+ 
     
 </body>
+ <!-- =============================================
+       FOOTER
+  ============================================= -->
+  <footer class="site-footer">
+    <div class="container footer__container">
+
+      <div class="footer__brand">
+        <h3>Barro & Fuego</h3>
+        <p>Piezas de diseño artesanal creadas para quienes encuentran belleza en los detalles esenciales.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Navegación del pie">
+        <h4>Navegación</h4>
+        <a href="../index.html">Inicio</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="proceso.html">Proceso</a>
+        <a href="cuidados.html">Cuidados</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+      <address class="footer__contact">
+        <h4>Contacto</h4>
+        <p>Buenos Aires, Argentina</p>
+        <p><a href="mailto:hola@barroyfuego.com">hola@barroyfuego.com</a></p>
+        <p><a href="tel:+541122220000">+54 11 2222-0000</a></p>
+
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </address>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p>© 2026 Barro & Fuego · Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
 </html>

@@ -1,0 +1,327 @@
+@use "../utilities/variables" as *;
+
+     
+/* ================================================
+   ORIGEN — Sección narrativa split
+================================================ */
+ 
+.seccion-origen {
+  padding-block: $espacio-lg;
+}
+ 
+.origen__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $espacio-2xl;
+  align-items: center;
+}
+ 
+.origen__visual {
+  display: flex;
+  justify-content: center;
+}
+ 
+.origen__img-principal {
+  width: 100%;
+  max-width: 52rem;
+  height: 60rem;
+  object-fit: cover;
+  border-radius: $radio-sm;
+  display: block;
+}
+ 
+.origen__content {
+  padding-inline: $espacio-md;
+}
+ 
+.origen__eyebrow {
+  font-family: $font-body;
+  font-size: 1.1rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $color-tierra-light;
+  margin-bottom: 1.8rem;
+}
+ 
+.origen__title {
+  font-size: 4rem;
+  font-weight: 400;
+  color: $color-carbon;
+  line-height: 1.15;
+  letter-spacing: -0.1rem;
+  margin-bottom: 2.4rem;
+}
+ 
+.origen__title em {
+  font-style: italic;
+  color: $color-tierra;
+}
+ 
+.origen__body p {
+  font-size: 1.6rem;
+  line-height: 1.85;
+  color: $color-texto-suave;
+  margin-bottom: 1.8rem;
+ 
+  &:last-child { margin-bottom: 0; }
+}
+ 
+.origen__body strong {
+  color: $color-carbon;
+  font-weight: 500;
+}
+ 
+/* ================================================
+   ETAPAS DEL PROCESO — Timeline vertical
+================================================ */
+ 
+.seccion-etapas {
+  padding-block:$espacio-lg;
+  background-color: $color-crema;
+}
+ 
+.etapas__header {
+  text-align: center;
+  margin-bottom: $espacio-xl;
+}
+ 
+.etapas__eyebrow {
+  font-family: $font-body;
+  font-size: 1.1rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $color-tierra-light;
+  margin-bottom: 1.4rem;
+}
+ 
+.etapas__title {
+  font-size: 4rem;
+  font-weight: 400;
+  color: $color-carbon;
+  line-height: 1.1;
+}
+ 
+/* ── Grid: col-izq | línea 4px | col-der ── */
+.etapas__list {
+  display: grid;
+  grid-template-columns: 1fr 4px 1fr;
+  position: relative;
+}
+ 
+/* Línea central — ocupa todas las filas del grid */
+.etapas__linea {
+  grid-column: 2;
+  grid-row: 1 / -1;          /* estira por todas las filas automáticamente */
+  background: linear-gradient(
+    to bottom,
+    $color-borde,
+    $color-tierra-light,
+    $color-borde
+  );
+  border-radius: 4px;
+}
+ 
+/* ── Fila de etapa: 3 celdas (izq | dot | der) ──
+   Usamos padding para que texto e imagen
+   queden centrados verticalmente entre sí    */
+ 
+.etapa__celda--izq {
+  grid-column: 1;
+  padding: 4rem 5rem 4rem 0;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+ 
+.etapa__celda--der {
+  grid-column: 3;
+  padding: 4rem 0 4rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+ 
+/* Dot — se alinea solo al centro de la fila */
+.etapa__dot {
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.etapa__dot-inner {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background-color: $color-tierra;
+  border: 3px solid $color-crema;
+  box-shadow: 0 0 0 2px $color-tierra-light;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+ 
+/* Imágenes dentro de las celdas */
+.etapa__celda--izq img,
+.etapa__celda--der img {
+  width: 100%;
+  max-width: 40rem;
+  height: 28rem;
+  object-fit: cover;
+  border-radius: $radio-sm;
+  display: block;
+}
+ 
+/* Imagen izquierda: empuja hacia la derecha (pegada a la línea) */
+.etapa__celda--izq img {
+  margin-left: auto;
+}
+ 
+/* Números y textos de etapa */
+.etapa__num {
+  font-family: $font-body;
+  font-size: 1.1rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $color-tierra-light;
+  margin-bottom: 0.8rem;
+}
+ 
+.etapa__nombre {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: $color-carbon;
+  margin-bottom: 1rem;
+}
+ 
+.etapa__desc {
+  font-size: 1.5rem;
+  line-height: 1.75;
+  color: $color-texto-suave;
+}
+ 
+/* ================================================
+   GALERÍA TALLER — Mosaico asimétrico
+================================================ */
+ 
+.seccion-galeria {
+  padding-block: $espacio-2xl;
+  background-color: $color-arena;
+  border-top: 1px solid $color-borde;
+  border-bottom: 1px solid $color-borde;
+}
+ 
+.galeria__header {
+  text-align: center;
+  margin-bottom: $espacio-xl;
+}
+ 
+.galeria__eyebrow {
+  font-family: $font-body;
+  font-size: 1.1rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $color-tierra-light;
+  margin-bottom: 1.4rem;
+}
+ 
+.galeria__title {
+  font-size: 4rem;
+  font-weight: 400;
+  color: $color-carbon;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+ 
+.galeria__subtitle {
+  font-size: 1.6rem;
+  color: $color-texto-suave;
+  max-width: 50rem;
+  margin-inline: auto;
+}
+ 
+/* Mosaico asimétrico: 12 columnas × 3 filas fijas */
+.galeria__mosaic {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 28rem);
+  gap: 1.2rem;
+}
+ 
+.galeria__item {
+  border-radius: $radio-md;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+ 
+  /* la imagen llena toda la celda del grid */
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+ 
+  &:hover img { transform: scale(1.05); }
+}
+ 
+/* Posicionamiento del mosaico — 8 fotos */
+.galeria__item:nth-child(1) { grid-column: 1 / 6;   grid-row: 1 / 3; }
+.galeria__item:nth-child(2) { grid-column: 6 / 9;   grid-row: 1 / 2; }
+.galeria__item:nth-child(3) { grid-column: 9 / 13;  grid-row: 1 / 2; }
+.galeria__item:nth-child(4) { grid-column: 6 / 10;  grid-row: 2 / 3; }
+.galeria__item:nth-child(5) { grid-column: 10 / 13; grid-row: 2 / 3; }
+.galeria__item:nth-child(6) { grid-column: 1 / 5;   grid-row: 3 / 4; }
+.galeria__item:nth-child(7) { grid-column: 5 / 9;   grid-row: 3 / 4; }
+.galeria__item:nth-child(8) { grid-column: 9 / 13;  grid-row: 3 / 4; }
+ 
+/* ================================================
+   CTA FINAL
+================================================ */
+ 
+.seccion-cta {
+  padding-block: $espacio-xl;
+  text-align: center;
+}
+ 
+.cta__eyebrow {
+  font-family: $font-body;
+  font-size: 1.1rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $color-tierra-light;
+  margin-bottom: 1.4rem;
+}
+ 
+.cta__title {
+  font-size: 4.4rem;
+  font-weight: 400;
+  color: $color-carbon;
+  line-height: 1.1;
+  margin-bottom: 1.6rem;
+ 
+  em {
+    font-style: italic;
+    color: $color-tierra;
+  }
+}
+ 
+.cta__desc {
+  font-size: 1.7rem;
+  color: $color-texto-suave;
+  max-width: 50rem;
+  margin-inline: auto;
+  line-height: 1.75;
+  margin-bottom: 3.2rem;
+}
+ 
+.cta__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+}
+ 

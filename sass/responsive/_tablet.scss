@@ -1,0 +1,120 @@
+@use "../utilities/variables" as *; 
+
+
+@media (max-width: 1024px) {
+/*--HEADER--*/
+
+  .header-top__inner {
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+  }
+
+  .header-top__logo {
+    grid-column: 1;
+    justify-content: flex-start;
+  }
+
+  .header-top__actions {
+    grid-column: 2;
+  }
+
+  .logo {
+    max-width: 140px;
+  }
+    .navbar__search input { 
+    width: 13rem; 
+    }
+
+  .navbar__menu a {
+    padding-inline: 1.4rem;
+    font-size: 1.2rem;
+  }
+
+/*--INDEX--*/
+.banner {
+    min-height: 60vh;
+  }
+
+  .banner__content {
+    padding: 8rem 2rem;
+  }
+
+  .banner__title {
+    font-size: 4rem;
+    max-width: 100%;
+  }
+.banner__subtitle {
+  font-size: 1.6rem;
+}
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+.feature-card {
+  padding: 1.5rem;
+}
+  .section__title {
+    font-size: 3.2rem;
+  }
+
+    .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-card__image {
+  height: 24rem;
+}
+
+/*--FOOTER--*/
+    .footer__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+  .footer__brand p {
+  max-width: 100%;
+}
+  /* Banner */
+  .banner__title { font-size: 4.2rem; }
+
+  /* Features: 2 columnas */
+  .features { grid-template-columns: repeat(2, 1fr); }
+
+  /* Productos: 2 columnas */
+  .products { grid-template-columns: repeat(2, 1fr); }
+
+/*--TIENDA--*/
+  .page-hero__title { font-size: 3.8rem; }
+
+  .shop-layout__inner {
+    grid-template-columns: 22rem 1fr;
+  }
+
+   /* Origen */
+  .origen__grid { grid-template-columns: 1fr; }
+  .origen__img-principal { height: 40rem; max-width: 100%; }
+  .origen__content { padding-inline: 0; }
+
+  /* Galería */
+  .galeria__mosaic { grid-template-rows: repeat(3, 22rem); }
+
+  /* CTA */
+  .cta__title { font-size: 3.6rem; }
+
+  /*--CONTACTO--*/
+
+  .contacto-grid {
+    grid-template-columns: 30rem 1fr;
+    gap: $espacio-xl;
+  }
+
+  /*--CUIDADOS--*/
+  .cuidados-intro__inner {
+    grid-template-columns: 1fr;
+    gap: $espacio-lg;
+    align-items: start;
+  }
+
+  .cuidados-intro__lead { max-width: 100%; }
+}

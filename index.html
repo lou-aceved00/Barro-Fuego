@@ -10,61 +10,65 @@
 </head>
 <body>
 
-  <!-- =============================================
-       HEADER: Logo + Carrito + Navbar
-  ============================================= -->
-  <header class="site-header">
+<!-- =============================================
+     HEADER: Logo + Carrito + Navbar
+============================================= -->
+<header class="site-header">
 
-    <!-- Barra superior: logo y acciones de usuario -->
-    <div class="header-top">
-      <div class="container header-top__inner">
+  <!-- Barra superior: logo y acciones de usuario -->
+  <div class="header-top">
+    <div class="container header-top__inner">
 
-        <div class="header-top__logo">
-          <img src="assets/logopng.png" alt="Logo Barro & Fuego" class="logo">
-        </div>
-
-        <div class="header-top__actions">
-          <button class="btn-icon" aria-label="Mi cuenta">
-            <i class="bi bi-person-circle"></i>
-          </button>
-          <button class="btn-icon btn-cart" aria-label="Ver carrito">
-            <i class="bi bi-cart"></i>
-            <span class="cart-label">Carrito</span>
-            <span class="cart-count">(0)</span>
-          </button>
-        </div>
-
+      <div class="header-top__logo">
+        <img src="assets/logopng.png" alt="Logo Barro & Fuego" class="logo">
       </div>
-    </div>
 
-    <!-- Barra de navegación principal -->
-    <nav class="navbar" aria-label="Navegación principal">
-      <div class="container navbar__inner">
-
-        <button class="navbar__toggle" aria-label="Abrir menú">
-          <i class="bi bi-list"></i>
+      <div class="header-top__actions">
+        <button class="btn-icon" aria-label="Mi cuenta">
+          <i class="bi bi-person-circle"></i>
         </button>
-
-        <ul class="navbar__menu">
-          <li><a href="index.html" class="active">Inicio</a></li>
-          <li><a href="./pages/tienda.html">Tienda</a></li>
-          <li><a href="./proceso.html">Proceso</a></li>
-          <li><a href="./cuidados.html">Cuidados</a></li>
-          <li><a href="./contacto.html">Contactanos</a></li>
-        </ul>
-
-        <div class="navbar__search">
-          <input type="search" placeholder="Buscar..." aria-label="Buscar productos">
-          <button class="btn-search" aria-label="Ejecutar búsqueda">
-            <i class="bi bi-search"></i>
-          </button>
-        </div>
-
+        <button class="btn-icon btn-cart" aria-label="Ver carrito">
+          <i class="bi bi-cart"></i>
+          <span class="cart-label">Carrito</span>
+          <span class="cart-count">(0)</span>
+        </button>
       </div>
-    </nav>
 
-  </header>
+    </div>
+  </div>
 
+  <!-- Barra de navegación principal -->
+  <nav class="navbar" aria-label="Navegación principal">
+
+    <!-- Checkbox oculto — motor del toggle CSS-only -->
+    <input type="checkbox" id="nav-toggle" class="navbar__toggle-input">
+
+    <div class="container navbar__inner">
+
+      <!-- Label que hace de hamburger -->
+      <label for="nav-toggle" class="navbar__toggle" aria-label="Abrir menú">
+        <i class="bi bi-list"></i>
+      </label>
+
+      <ul class="navbar__menu">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="./pages/tienda.html">Tienda</a></li>
+        <li><a href="./proceso.html">Proceso</a></li>
+        <li><a href="./cuidados.html">Cuidados</a></li>
+        <li><a href="./contacto.html">Contactanos</a></li>
+      </ul>
+
+      <div class="navbar__search">
+        <input type="search" placeholder="Buscar..." aria-label="Buscar productos">
+        <button class="btn-search" aria-label="Ejecutar búsqueda">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+</header>
   <!-- =============================================
        BANNER HERO
   ============================================= -->
@@ -72,7 +76,7 @@
     <div class="banner__content">
       <h1 class="banner__title">Barro & Fuego</h1>
       <p class="banner__subtitle">La esencia de la tierra, transformada en piezas atemporales.</p>
-      <a href="./tienda.html" class="btn btn--ghost-light">Ver Colección</a>
+      <a href="./pages/tienda.html" class="btn btn--ghost-light">Ver Colección</a>
     </div>
   </section>
 
@@ -259,11 +263,11 @@
 
       <nav class="footer__nav" aria-label="Navegación del pie">
         <h4>Navegación</h4>
-        <a href="./index.html">Inicio</a>
-        <a href="./tienda.html">Tienda</a>
-        <a href="./proceso.html">Proceso</a>
-        <a href="./cuidados.html">Cuidados</a>
-        <a href="./contacto.html">Contacto</a>
+        <a href="index.html">Inicio</a>
+        <a href="./pages/tienda.html">Tienda</a>
+        <a href="./pages/proceso.html">Proceso</a>
+        <a href="./pages/cuidados.html">Cuidados</a>
+        <a href="./pages/contacto.html">Contacto</a>
       </nav>
 
       <address class="footer__contact">
