@@ -1,5 +1,6 @@
 @use "../utilities/variables" as *;
 @use "sass:color"; 
+@use "../utilities/mixins" as *;
 /* ================================================
    CONTACTO
 ================================================ */
@@ -139,8 +140,7 @@
 }
 
 .contacto-red {
-  display: flex;
-  align-items: center;
+  @include flex-align-center;
   gap: 1.2rem;
   text-decoration: none;
   color: $color-texto-suave;
@@ -251,8 +251,7 @@
 }
 
 .form-pie {
-  display: flex;
-  align-items: center;
+  @include flex-align-center;
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
@@ -291,9 +290,7 @@
 }
 
 .contacto-mapa__label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
   gap: 0.8rem;
   padding-block: 1.6rem;
   background-color: $color-blanco;

@@ -1,4 +1,5 @@
 @use "../utilities/variables" as *;
+@use "../utilities/mixins" as*;
 
 .site-footer {
   background-color: $color-carbon;
@@ -77,9 +78,7 @@
   height: 4rem;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
   color: $color-arena;
   font-size: 1.8rem;
   transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
@@ -101,41 +100,4 @@
   font-size: 1.3rem;
   color: $color-foot-cont;
   letter-spacing: 0.05em;
-}
-
-/* ── Responsive ── */
-@media (max-width: 1024px) {
-
-  .footer__container {
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-  }
-
-  .footer__brand {
-    grid-column: 1 / -1;
-  }
-
-}
-@media (max-width: 768px) {
-
-  .footer__container {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    text-align: center;
-  }
-
-    .footer__brand p {
-    max-width: 100%;
-    margin-inline: auto;
-  }
-    .footer__nav {
-    align-items: center;
-  }
-  .footer__social {
-    justify-content: center;
-  }
-  .footer__brand h3 {
-    font-size: 2.4rem;
-  }
-  
 }
